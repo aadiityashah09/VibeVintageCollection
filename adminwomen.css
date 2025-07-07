@@ -1,0 +1,131 @@
+/* admin.css */
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f4f6fb;
+    color: #333;
+}
+
+header {
+    background: linear-gradient(135deg, #1e3c72, #f4f6f8); /* Blue gradient */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+h1, h2 {
+    color: #1e3c72;
+}
+
+.admin-section {
+    padding: 30px;
+    max-width: 1200px;
+    margin: auto;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.05);
+}
+
+.admin-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.admin-form input[type="text"],
+.admin-form textarea,
+.admin-form input[type="file"] {
+    padding: 10px;
+    border: 2px solid #1e3c72;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.admin-form input:focus,
+.admin-form textarea:focus {
+    border-color: #8a2be2; /* Violet accent */
+    outline: none;
+}
+
+.admin-form button {
+    background: #ff7f11; /* Orange */
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.admin-form button:hover {
+    background: #e36d00;
+}
+
+/* Add this to improve form layout inside table cells */
+table td form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Style inline form inputs inside table */
+table td form input[type="text"],
+table td form textarea {
+    width: 100%;
+    max-width: 150px;
+    font-size: 0.9rem;
+    padding: 6px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Improve buttons inside action cells */
+table td form button {
+    padding: 6px 10px;
+    font-size: 0.85rem;
+    background-color: #1e3c72;
+    color: white;
+    border-radius: 4px;
+}
+
+table td form button:hover {
+    background-color: #8a2be2;
+}
+
+/* Responsive fix for table cells */
+@media screen and (max-width: 768px) {
+    table,
+    table thead,
+    table tbody,
+    table th,
+    table td,
+    table tr {
+        display: block;
+    }
+
+    table tr {
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        padding: 10px;
+    }
+
+    table td {
+        text-align: left;
+        padding: 10px 5px;
+    }
+
+    table td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        display: block;
+        margin-bottom: 4px;
+        color: #1e3c72;
+    }
+}
